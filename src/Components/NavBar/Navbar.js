@@ -2,7 +2,7 @@ export default function Navbbar() {
   return (
     <div>
       <nav className="navbar navbar-expand-lg navbar-dark bg-primary">
-        <a className="navbar-brand">Reqres API</a>
+        Reqres API
         <button
           className="navbar-toggler"
           type="button"
@@ -17,13 +17,13 @@ export default function Navbbar() {
         <div className="collapse navbar-collapse" id="navbarNavDropdown">
           <ul className="navbar-nav">
             <li className="nav-item active">
-              <a className="nav-link">
+              <p className="nav-link">
                 Home <span className="sr-only">(current)</span>
-              </a>
+              </p>
             </li>
             <li className="nav-item">
-              <a>
-                {/* <Router>
+              {/* <a> */}
+              {/* <Router>
                   <Link className="nav-link" to="/users">
                     Users
                   </Link>
@@ -31,10 +31,10 @@ export default function Navbbar() {
                     <Route path="/users" element={<Users />} />
                   </Routes>
                 </Router> */}
-              </a>
+              {/* </a> */}
             </li>
             <li className="nav-item">
-              <a className="nav-link">Add User</a>
+              <p className="nav-link">Add User</p>
             </li>
           </ul>
         </div>
