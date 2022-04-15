@@ -40,7 +40,7 @@ export default class Login extends React.Component {
                 <img
                   src="https://mdbcdn.b-cdn.net/img/Photos/new-templates/bootstrap-login-form/draw2.webp"
                   className="img-fluid"
-                  alt="Sample image"
+                  alt="Sampleimage"
                 />
               </div>
               <div className="col-md-8 col-lg-6 col-xl-4 offset-xl-1">
