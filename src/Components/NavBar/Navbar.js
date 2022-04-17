@@ -1,6 +1,10 @@
-export default function Navbbar() {
+import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
+import Users from "../Users/Users";
+import Login from "../Login/Login";
+import CreateUser from "../Users/CreateUser/CreateUser";
+export default function Navbar() {
   return (
-    <div>
+    <Router>
       <nav className="navbar navbar-expand-lg navbar-dark bg-primary">
         Reqres API
         <button
@@ -17,28 +21,41 @@ export default function Navbbar() {
         <div className="collapse navbar-collapse" id="navbarNavDropdown">
           <ul className="navbar-nav">
             <li className="nav-item active">
-              <p className="nav-link">
-                Home <span className="sr-only">(current)</span>
-              </p>
+              <a>
+                <Link className="nav-link" to="/home">
+                  Home
+                </Link>
+              </a>
             </li>
             <li className="nav-item">
-              {/* <a> */}
-              {/* <Router>
-                  <Link className="nav-link" to="/users">
-                    Users
-                  </Link>
-                  <Routes>
-                    <Route path="/users" element={<Users />} />
-                  </Routes>
-                </Router> */}
-              {/* </a> */}
+              <a>
+                <Link className="nav-link" to="/login">
+                  Login
+                </Link>
+              </a>
             </li>
             <li className="nav-item">
-              <p className="nav-link">Add User</p>
+              <a>
+                <Link className="nav-link" to="/users">
+                  Users
+                </Link>
+              </a>
+            </li>
+            <li className="nav-item">
+              <a>
+                <Link className="nav-link" to="/addUser">
+                  Add user
+                </Link>
+              </a>
             </li>
           </ul>
         </div>
       </nav>
-    </div>
+      <Routes>
+        <Route path="/users" element={<Users />} />
+        <Route path="/login" element={<Login />} />
+        <Route path="/addUser" element={<CreateUser />} />
+      </Routes>
+    </Router>
   );
 }
